@@ -1,0 +1,24 @@
+// reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body {
+    background-color: #fff;
+    font-weight: 200;
+    margin: 0;
+}
+
+// utility
+.container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.d-flex{
+    display: flex;
+}
+.justify_center{
+    justify-content: center;
+}

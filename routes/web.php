@@ -1,5 +1,6 @@
 <?php
 
+// use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,12 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('products', function () {
-    dd(json_decode(config('dati_pasta.pasta'), true));
+
+    // return view('products');
+
+    $data = (json_decode(config('dati_pasta.pasta'), true));
     return view('products', compact('data'));
+
 })->name('products');
 
 Route::get('contacts', function () {

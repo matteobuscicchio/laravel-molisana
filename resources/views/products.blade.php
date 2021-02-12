@@ -1,22 +1,67 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+<main id="products">
+    <div class="container">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="./css/app.css">
+        <h2>Le Lunghe</h2>
+        <section>
+            @foreach($data as $value ) 
+                @if($value['tipo'] === 'lunga')
+                    <div class="column">
+                        <div class="card">
+                            <div class="overlay">
+                                <div class="pasta_info">
+                                    <h5>{{ $value['titolo'] }}</h5>
+                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
+                                </div>
+                            </div>
+                            <img class="img_pasta" src="{{ $value['src'] }}" alt="">
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        </section>
+        
+        <h2>Le Corte</h2>
+        <section>
+            @foreach($data as $value ) 
+                @if($value['tipo'] === 'corta')
+                    <div class="column">
+                        <div class="card">
+                            <div class="overlay">
+                                <div class="pasta_info">
+                                    <h5>{{ $value['titolo'] }}</h5>
+                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
+                                </div>
+                            </div>
+                            <img class="img_pasta" src="{{ $value['src'] }}" alt="">
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        </section>
 
-    </head>
-    <body>
-        <h1>Products</h1>
-        <a href="/">Home</a>
-        <a href="products">Products</a>
-        <a href="contacts">Contacts</a>
-    </body>
-</html>
+        <h2>Le Cortissime</h2>
+        <section>
+            @foreach($data as $value )
+                @if($value['tipo'] === 'cortissima')
+                    <div class="column">
+                        <div class="card">
+                            <div class="overlay">
+                                <div class="pasta_info">
+                                    <h5>{{ $value['titolo'] }}</h5>
+                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
+                                </div>
+                            </div>
+                            <img class="img_pasta" src="{{ $value['src'] }}" alt="">
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        </section>
+    </div>
+</main>
+
+@endsection

@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-weight: 200;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify_center {
+  justify-content: center;
+}
+
+header nav {
+  background-color: #B1D281;
+  height: 60px;
+  align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333338;
+  font-size: 16px;
+}
+
+header nav a:not(:last-child) {
+  padding-right: 70px;
+}
+
+header nav a:active,
+header nav a:hover {
+  color: #002D75;
+  font-weight: 600;
+}
+
+main#products {
+  background-image: url("/img/sfondo_prodotti.jpg");
+  padding: 20px 0;
+}
+
+main#products h2 {
+  padding: 20px 0;
+  text-align: center;
+  color: #002D75;
+  font-size: 34px;
+}
+
+main#products section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+main#products section div.column {
+  width: calc(100% / 3);
+  padding: 20px;
+}
+
+main#products section div.column .card {
+  position: relative;
+}
+
+main#products section div.column .card .overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+main#products section div.column .card .overlay .pasta_info {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main#products section div.column .card .overlay .pasta_info img.icon {
+  width: 40px;
+}
+
+main#products section div.column .card .overlay .pasta_info h5 {
+  font-size: 2em;
+}
+
+main#products section div.column .card img.img_pasta {
+  width: 100%;
+}
+
+main#products section div.column .card:hover .overlay {
+  display: block;
+  cursor: pointer;
+}
+
+footer#site_footer {
+  background: #F5F5F1;
+}
+
